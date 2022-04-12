@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_graph"
+    app:startDestination="@id/homeScreenFragment">
+
+    <fragment
+        android:id="@+id/homeScreenFragment"
+        android:name="com.kidkiller.usoundchallange.HomeScreen"
+        android:label="fragment_home_screen"
+        tools:layout="@layout/fragment_home_screen" >
+        <action
+            android:id="@+id/action_homeScreenFragment_to_soundNoiseDetail"
+            app:destination="@id/soundNoiseDetail" />
+    </fragment>
+    <fragment
+        android:id="@+id/soundNoiseDetail"
+        android:name="com.kidkiller.usoundchallange.SoundNoiseDetail"
+        android:label="fragment_sound_noise_detail"
+        tools:layout="@layout/fragment_sound_noise_detail" />
+</navigation>
