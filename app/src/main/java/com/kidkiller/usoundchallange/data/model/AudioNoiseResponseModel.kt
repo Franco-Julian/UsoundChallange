@@ -1,4 +1,4 @@
-package com.kidkiller.usoundchallange.model
+package com.kidkiller.usoundchallange.data.model
 
 import com.google.gson.annotations.SerializedName
 

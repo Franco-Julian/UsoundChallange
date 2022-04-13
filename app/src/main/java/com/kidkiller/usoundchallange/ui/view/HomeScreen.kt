@@ -1,10 +1,9 @@
-package com.kidkiller.usoundchallange
+package com.kidkiller.usoundchallange.ui.view
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
 import android.view.View
-import android.view.ViewGroup
+import com.kidkiller.usoundchallange.R
 import com.kidkiller.usoundchallange.databinding.FragmentHomeScreenBinding
 
 
