@@ -5,7 +5,7 @@ import com.kidkiller.usoundchallange.data.model.AudioNoiseResponseModel
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 
-private const val URL = "api/repited-tone/"
+private const val URL = "api/repited-tone"
 private const val API_KEY = "262bce0ecb39887113b5c1638b05ea3b12f23762"
 
 class AudioNoiseService {
