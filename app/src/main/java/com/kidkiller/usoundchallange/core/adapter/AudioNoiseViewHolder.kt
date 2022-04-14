@@ -13,6 +13,5 @@ class AudioNoiseViewHolder(view: View): RecyclerView.ViewHolder(view) {
         binding.tvLastUpdate.text = audioNoise.lastUpdate
         binding.tvPatient.text = audioNoise.patient.toString()
         binding.tvType.text = audioNoise.type
-
     }
 }

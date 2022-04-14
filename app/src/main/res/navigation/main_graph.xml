@@ -3,20 +3,62 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main_graph"
-    app:startDestination="@id/homeScreenFragment">
-
+    app:startDestination="@id/homeScreen">
     <fragment
-        android:id="@+id/homeScreenFragment"
+        android:id="@+id/homeScreen"
         android:name="com.kidkiller.usoundchallange.ui.view.HomeScreen"
         android:label="fragment_home_screen"
         tools:layout="@layout/fragment_home_screen" >
         <action
-            android:id="@+id/action_homeScreenFragment_to_soundNoiseDetail"
+            android:id="@+id/action_homeScreen_to_soundNoiseDetail"
             app:destination="@id/soundNoiseDetail" />
     </fragment>
     <fragment
         android:id="@+id/soundNoiseDetail"
         android:name="com.kidkiller.usoundchallange.ui.view.SoundNoiseDetail"
         android:label="fragment_sound_noise_detail"
-        tools:layout="@layout/fragment_sound_noise_detail" />
+        tools:layout="@layout/fragment_sound_noise_detail" >
+        <argument
+            android:name="id"
+            app:argType="integer" />
+        <argument
+            android:name="type"
+            app:argType="string" />
+        <argument
+            android:name="anc"
+            app:argType="boolean" />
+        <argument
+            android:name="frequency"
+            app:argType="integer" />
+        <argument
+            android:name="channel"
+            app:argType="string" />
+        <argument
+            android:name="hearingThresholdDifference"
+            app:argType="integer" />
+        <argument
+            android:name="avgSoundPressureLevelDifference"
+            app:argType="integer" />
+        <argument
+            android:name="instantSoundPressureLevelDifference"
+            app:argType="integer" />
+        <argument
+            android:name="avgDistanceDifference"
+            app:argType="integer" />
+        <argument
+            android:name="freqInstantIntensityDifference"
+            app:argType="integer" />
+        <argument
+            android:name="freqAvgIntensityDifference"
+            app:argType="integer" />
+        <argument
+            android:name="lastUpdate"
+            app:argType="string" />
+        <argument
+            android:name="timestamp"
+            app:argType="string" />
+        <argument
+            android:name="patient"
+            app:argType="integer" />
+    </fragment>
 </navigation>
