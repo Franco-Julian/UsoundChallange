@@ -3,14 +3,16 @@ package com.kidkiller.usoundchallange.data
 import com.kidkiller.usoundchallange.data.model.AudioNoiseProvider
 import com.kidkiller.usoundchallange.data.model.AudioNoiseResponseModel
 import com.kidkiller.usoundchallange.data.network.AudioNoiseService
+import javax.inject.Inject
 
-class AudioNoiseRepository {
+class AudioNoiseRepository @Inject constructor(
+    private val api: AudioNoiseService,
+    private val audioNoiseProvider: AudioNoiseProvider
+) {
 
-    private val api = AudioNoiseService()
-
-    suspend fun getAudioNoise(): List<AudioNoiseResponseModel>{
+    suspend fun getAudioNoise(): List<AudioNoiseResponseModel> {
         val response = api.getAudioNoise()
-        AudioNoiseProvider.audioNoise = response
+        audioNoiseProvider.audioNoise = response
         return response
     }
 }

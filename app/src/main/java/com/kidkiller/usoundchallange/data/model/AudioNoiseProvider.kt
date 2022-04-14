@@ -1,7 +1,9 @@
 package com.kidkiller.usoundchallange.data.model
 
-class AudioNoiseProvider {
-    companion object{
-        var audioNoise: List<AudioNoiseResponseModel> = emptyList()
-    }
+import javax.inject.Inject
+import javax.inject.Singleton
+
+@Singleton
+class AudioNoiseProvider @Inject constructor() {
+    var audioNoise: List<AudioNoiseResponseModel> = emptyList()
 }
