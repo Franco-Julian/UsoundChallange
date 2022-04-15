@@ -5,5 +5,5 @@ import com.kidkiller.usoundchallange.data.model.AudioNoiseResponseModel
 import javax.inject.Inject
 
 class GetAudioNoiseUseCase @Inject constructor(private val repository: AudioNoiseRepository) {
-    suspend operator fun invoke(): List<AudioNoiseResponseModel>? = repository.getAudioNoise()
+    suspend operator fun invoke(): List<AudioNoiseResponseModel> = repository.getAudioNoise()
 }

@@ -5,7 +5,6 @@ import androidx.fragment.app.Fragment
 import android.view.View
 import androidx.core.view.isVisible
 import androidx.fragment.app.viewModels
-import androidx.lifecycle.Observer
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.kidkiller.usoundchallange.R
@@ -20,7 +19,6 @@ class HomeScreen : Fragment(R.layout.fragment_home_screen), AudioNoiseAdapter.On
 
     private lateinit var binding: FragmentHomeScreenBinding
     private lateinit var adapter: AudioNoiseAdapter
-    private val audioNoiseList = mutableListOf<AudioNoiseResponseModel>()
 
     private val homeScreenViewModel: HomeScreenViewModel by viewModels()
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -32,13 +30,13 @@ class HomeScreen : Fragment(R.layout.fragment_home_screen), AudioNoiseAdapter.On
         super.onViewCreated(view, savedInstanceState)
         binding = FragmentHomeScreenBinding.bind(view)
 
-        homeScreenViewModel.audioNoiseList.observe(viewLifecycleOwner, Observer {
+        homeScreenViewModel.audioNoiseList.observe(viewLifecycleOwner) {
             if (!it.isNullOrEmpty()) initRecyclerView(it)
-        })
+        }
 
-        homeScreenViewModel.isLoading.observe(viewLifecycleOwner, Observer {
+        homeScreenViewModel.isLoading.observe(viewLifecycleOwner) {
             binding.idProgress.isVisible = it
-        })
+        }
     }
 
     private fun initRecyclerView(list: List<AudioNoiseResponseModel>){
