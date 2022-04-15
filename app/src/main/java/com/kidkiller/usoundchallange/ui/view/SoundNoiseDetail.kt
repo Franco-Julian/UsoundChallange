@@ -14,6 +14,7 @@ class SoundNoiseDetail : Fragment(R.layout.fragment_sound_noise_detail) {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        binding = FragmentSoundNoiseDetailBinding.bind(view)
         loadDetailsInfo()
     }
 

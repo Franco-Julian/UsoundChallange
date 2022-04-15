@@ -23,11 +23,14 @@ class HomeScreen : Fragment(R.layout.fragment_home_screen), AudioNoiseAdapter.On
     private val audioNoiseList = mutableListOf<AudioNoiseResponseModel>()
 
     private val homeScreenViewModel: HomeScreenViewModel by viewModels()
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        homeScreenViewModel.onCreate()
+    }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         binding = FragmentHomeScreenBinding.bind(view)
-        homeScreenViewModel.onCreate()
 
         homeScreenViewModel.audioNoiseList.observe(viewLifecycleOwner, Observer {
             if (!it.isNullOrEmpty()) initRecyclerView(it)
