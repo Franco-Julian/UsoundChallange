@@ -1,4 +1,4 @@
-package com.kidkiller.di
+package com.kidkiller.usoundchallange.di
 
 import com.kidkiller.usoundchallange.data.network.AudioNoiseApiClient
 import dagger.Module
@@ -7,7 +7,6 @@ import dagger.hilt.InstallIn
 import dagger.hilt.components.SingletonComponent
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
-import retrofit2.create
 import javax.inject.Singleton
 
 @Module
@@ -18,7 +17,7 @@ object NetworkModule {
     @Provides
     fun provideRetrofit(): Retrofit{
         return Retrofit.Builder()
-            .baseUrl("http://testing-kit-pro-backend-internal.usound.co/general/api/")
+            .baseUrl("https://testing-kit-pro-backend-internal.usound.co/general/api/")
             .addConverterFactory(GsonConverterFactory.create())
             .build()
     }

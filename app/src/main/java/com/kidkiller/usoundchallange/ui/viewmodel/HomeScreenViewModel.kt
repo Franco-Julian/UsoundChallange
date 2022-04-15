@@ -23,7 +23,7 @@ class HomeScreenViewModel @Inject constructor(
             val result = getAudioNoiseUseCase()
 
             if (!result.isNullOrEmpty()){
-                audioNoiseList.postValue(result!!)
+                audioNoiseList.postValue(result.sortedWith(compareBy { it.type }))
                 isLoading.postValue(false)
             }
         }

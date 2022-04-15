@@ -13,8 +13,9 @@ import com.kidkiller.usoundchallange.core.adapter.AudioNoiseAdapter
 import com.kidkiller.usoundchallange.data.model.AudioNoiseResponseModel
 import com.kidkiller.usoundchallange.databinding.FragmentHomeScreenBinding
 import com.kidkiller.usoundchallange.ui.viewmodel.HomeScreenViewModel
+import dagger.hilt.android.AndroidEntryPoint
 
-
+@AndroidEntryPoint
 class HomeScreen : Fragment(R.layout.fragment_home_screen), AudioNoiseAdapter.OnAudioNoiseClickListener  {
 
     private lateinit var binding: FragmentHomeScreenBinding
@@ -26,11 +27,10 @@ class HomeScreen : Fragment(R.layout.fragment_home_screen), AudioNoiseAdapter.On
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         binding = FragmentHomeScreenBinding.bind(view)
-        initRecyclerView()
         homeScreenViewModel.onCreate()
 
         homeScreenViewModel.audioNoiseList.observe(viewLifecycleOwner, Observer {
-            if (!it.isNullOrEmpty()) updateRecyclerView(it)
+            if (!it.isNullOrEmpty()) initRecyclerView(it)
         })
 
         homeScreenViewModel.isLoading.observe(viewLifecycleOwner, Observer {
@@ -38,14 +38,8 @@ class HomeScreen : Fragment(R.layout.fragment_home_screen), AudioNoiseAdapter.On
         })
     }
 
-    private fun updateRecyclerView(list: List<AudioNoiseResponseModel>) {
-        audioNoiseList.clear()
-        audioNoiseList.addAll(list)
-        adapter.notifyDataSetChanged()
-    }
-
-    private fun initRecyclerView(){
-        adapter = AudioNoiseAdapter(audioNoiseList,this)
+    private fun initRecyclerView(list: List<AudioNoiseResponseModel>){
+        adapter = AudioNoiseAdapter(list,this)
         binding.recyclerAudioNoise.layoutManager = LinearLayoutManager(context)
         binding.recyclerAudioNoise.adapter = adapter
 

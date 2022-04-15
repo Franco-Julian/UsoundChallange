@@ -35,22 +35,22 @@
             app:argType="string" />
         <argument
             android:name="hearingThresholdDifference"
-            app:argType="integer" />
+            app:argType="float" />
         <argument
             android:name="avgSoundPressureLevelDifference"
-            app:argType="integer" />
+            app:argType="float" />
         <argument
             android:name="instantSoundPressureLevelDifference"
-            app:argType="integer" />
+            app:argType="float" />
         <argument
             android:name="avgDistanceDifference"
-            app:argType="integer" />
+            app:argType="float" />
         <argument
             android:name="freqInstantIntensityDifference"
-            app:argType="integer" />
+            app:argType="float" />
         <argument
             android:name="freqAvgIntensityDifference"
-            app:argType="integer" />
+            app:argType="float" />
         <argument
             android:name="lastUpdate"
             app:argType="string" />
