@@ -18,7 +18,7 @@
             android:layout_height="50dp"
             android:fontFamily="sans-serif-black"
             android:textColor="@color/black"
-            android:layout_marginTop="24dp"
+            android:layout_marginTop="18dp"
             android:textSize="25sp"
             android:textStyle="bold"
             android:text="Audio Noise Information"
@@ -45,7 +45,7 @@
             app:layout_constraintTop_toBottomOf="@id/ivPersonInfo"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            android:layout_margin="12dp"
+            android:layout_margin="10dp"
             tools:text="id"/>
 
         <TextView
@@ -55,7 +55,7 @@
             app:layout_constraintTop_toBottomOf="@id/tvId"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            android:layout_margin="12dp"
+            android:layout_margin="10dp"
             tools:text="Type"/>
 
         <TextView
@@ -65,7 +65,7 @@
             app:layout_constraintTop_toBottomOf="@id/tvType"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            android:layout_margin="12dp"
+            android:layout_margin="10dp"
             tools:text="Anc"/>
 
         <TextView
@@ -75,7 +75,7 @@
             app:layout_constraintTop_toBottomOf="@id/tvAnc"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            android:layout_margin="12dp"
+            android:layout_margin="10dp"
             tools:text="Frequency"/>
 
         <TextView
@@ -85,7 +85,7 @@
             app:layout_constraintTop_toBottomOf="@id/tvFrequency"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            android:layout_margin="12dp"
+            android:layout_margin="10dp"
             tools:text="Channel"/>
 
         <TextView
@@ -95,7 +95,7 @@
             app:layout_constraintTop_toBottomOf="@id/tvChannel"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            android:layout_margin="12dp"
+            android:layout_margin="10dp"
             tools:text="HearingThresholdDifference"/>
 
         <TextView
@@ -105,7 +105,7 @@
             app:layout_constraintTop_toBottomOf="@id/tvHearingThresholdDifference"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            android:layout_margin="12dp"
+            android:layout_margin="10dp"
             tools:text="AvgSoundPressureLevelDifference"/>
 
         <TextView
@@ -115,7 +115,7 @@
             app:layout_constraintTop_toBottomOf="@id/tvAvgSoundPressureLevelDifference"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            android:layout_margin="12dp"
+            android:layout_margin="10dp"
             tools:text="InstantSoundPressureLevelDifference"/>
 
         <TextView
@@ -125,7 +125,7 @@
             app:layout_constraintTop_toBottomOf="@id/tvInstantSoundPressureLevelDifference"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            android:layout_margin="12dp"
+            android:layout_margin="10dp"
             tools:text="AvgDistanceDifference"/>
 
         <TextView
@@ -135,7 +135,7 @@
             app:layout_constraintTop_toBottomOf="@id/tvAvgDistanceDifference"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            android:layout_margin="12dp"
+            android:layout_margin="10dp"
             tools:text="FreqInstantIntensityDifference"/>
 
         <TextView
@@ -145,7 +145,7 @@
             app:layout_constraintTop_toBottomOf="@id/tvFreqInstantIntensityDifference"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            android:layout_margin="12dp"
+            android:layout_margin="10dp"
             tools:text="FreqAvgIntensityDifference"/>
 
         <TextView
@@ -155,7 +155,7 @@
             app:layout_constraintTop_toBottomOf="@id/tvFreqAvgIntensityDifference"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            android:layout_margin="12dp"
+            android:layout_margin="10dp"
             tools:text="LastUpdate"/>
 
         <TextView
@@ -165,7 +165,7 @@
             app:layout_constraintTop_toBottomOf="@id/tvLastUpdate"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            android:layout_margin="12dp"
+            android:layout_margin="10dp"
             tools:text="Timestamp"/>
 
         <TextView
@@ -175,7 +175,7 @@
             app:layout_constraintTop_toBottomOf="@id/tvTimestamp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            android:layout_margin="12dp"
+            android:layout_margin="10dp"
             tools:text="Patient"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>

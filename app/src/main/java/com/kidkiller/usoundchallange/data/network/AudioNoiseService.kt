@@ -3,6 +3,7 @@ package com.kidkiller.usoundchallange.data.network
 import com.kidkiller.usoundchallange.data.model.AudioNoiseResponseModel
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
+import retrofit2.await
 import javax.inject.Inject
 
 private const val URL = "api/repited-tone/"
@@ -12,8 +13,12 @@ class AudioNoiseService @Inject constructor(private val api: AudioNoiseApiClient
 
     suspend fun getAudioNoise(): List<AudioNoiseResponseModel> {
         return withContext(Dispatchers.IO) {
-            val response = api.getNoiseInfo(URL,API_KEY)
-            response.body() ?: emptyList()
+            try {
+                val response = api.getNoiseInfo(URL,API_KEY)
+                response.body() ?: emptyList()
+            }catch (e: Exception) {
+                emptyList()
+            }
         }
     }
 }

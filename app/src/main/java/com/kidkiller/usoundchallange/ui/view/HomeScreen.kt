@@ -9,8 +9,8 @@ import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.kidkiller.usoundchallange.R
 import com.kidkiller.usoundchallange.core.adapter.AudioNoiseAdapter
-import com.kidkiller.usoundchallange.data.model.AudioNoiseResponseModel
 import com.kidkiller.usoundchallange.databinding.FragmentHomeScreenBinding
+import com.kidkiller.usoundchallange.domain.model.AudioNoise
 import com.kidkiller.usoundchallange.ui.viewmodel.HomeScreenViewModel
 import dagger.hilt.android.AndroidEntryPoint
 
@@ -39,14 +39,14 @@ class HomeScreen : Fragment(R.layout.fragment_home_screen), AudioNoiseAdapter.On
         }
     }
 
-    private fun initRecyclerView(list: List<AudioNoiseResponseModel>){
+    private fun initRecyclerView(list: List<AudioNoise>){
         adapter = AudioNoiseAdapter(list,this)
         binding.recyclerAudioNoise.layoutManager = LinearLayoutManager(context)
         binding.recyclerAudioNoise.adapter = adapter
 
     }
 
-    override fun onAudioNoiseClick(audioNoise: AudioNoiseResponseModel) {
+    override fun onAudioNoiseClick(audioNoise: AudioNoise) {
         val action = HomeScreenDirections.actionHomeScreenToSoundNoiseDetail(
             audioNoise.id,
             audioNoise.type,
@@ -65,5 +65,4 @@ class HomeScreen : Fragment(R.layout.fragment_home_screen), AudioNoiseAdapter.On
         )
             findNavController().navigate(action)
     }
-
 }

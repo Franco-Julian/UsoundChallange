@@ -6,14 +6,15 @@ import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.kidkiller.usoundchallange.data.model.AudioNoiseResponseModel
 import com.kidkiller.usoundchallange.databinding.AudioNoiseItemBinding
+import com.kidkiller.usoundchallange.domain.model.AudioNoise
 
 class AudioNoiseAdapter(
-    private val audioNoiseList: List<AudioNoiseResponseModel>,
+    private val audioNoiseList: List<AudioNoise>,
     private val itemClickListener: OnAudioNoiseClickListener
 ) : RecyclerView.Adapter<AudioNoiseViewHolder>() {
 
     interface OnAudioNoiseClickListener {
-        fun onAudioNoiseClick(audioNoise: AudioNoiseResponseModel)
+        fun onAudioNoiseClick(audioNoise: AudioNoise)
     }
 
         override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): AudioNoiseViewHolder {
