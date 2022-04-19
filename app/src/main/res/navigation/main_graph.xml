@@ -7,16 +7,20 @@
     <fragment
         android:id="@+id/homeScreen"
         android:name="com.kidkiller.usoundchallange.ui.view.HomeScreen"
-        android:label="fragment_home_screen"
+        android:label="Audio Noise Usound"
         tools:layout="@layout/fragment_home_screen" >
         <action
             android:id="@+id/action_homeScreen_to_soundNoiseDetail"
-            app:destination="@id/soundNoiseDetail" />
+            app:destination="@id/soundNoiseDetail"
+            app:enterAnim="@anim/slide_in_left"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_right"
+            app:popExitAnim="@anim/slide_out_right" />
     </fragment>
     <fragment
         android:id="@+id/soundNoiseDetail"
         android:name="com.kidkiller.usoundchallange.ui.view.SoundNoiseDetail"
-        android:label="fragment_sound_noise_detail"
+        android:label="Audio Noise Details"
         tools:layout="@layout/fragment_sound_noise_detail" >
         <argument
             android:name="id"

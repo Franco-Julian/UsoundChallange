@@ -1,8 +1,16 @@
 package com.kidkiller.usoundchallange.ui.view
 
+import android.app.ActionBar
+import android.app.Activity
+import android.content.Context
 import android.os.Bundle
+import android.view.Menu
+import android.view.MenuInflater
 import androidx.fragment.app.Fragment
 import android.view.View
+import android.widget.Toolbar
+import androidx.activity.OnBackPressedCallback
+import androidx.navigation.Navigation
 import androidx.navigation.fragment.navArgs
 import com.kidkiller.usoundchallange.R
 import com.kidkiller.usoundchallange.databinding.FragmentSoundNoiseDetailBinding
@@ -15,7 +23,9 @@ class SoundNoiseDetail : Fragment(R.layout.fragment_sound_noise_detail) {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         binding = FragmentSoundNoiseDetailBinding.bind(view)
+
         loadDetailsInfo()
+
     }
 
     private fun loadDetailsInfo() {

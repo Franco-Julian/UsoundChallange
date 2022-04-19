@@ -6,6 +6,8 @@ import androidx.lifecycle.viewModelScope
 import com.kidkiller.usoundchallange.domain.GetAudioNoiseUseCase
 import com.kidkiller.usoundchallange.domain.model.AudioNoise
 import dagger.hilt.android.lifecycle.HiltViewModel
+import kotlinx.coroutines.flow.MutableStateFlow
+import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 
@@ -14,17 +16,20 @@ class HomeScreenViewModel @Inject constructor(
     private val getAudioNoiseUseCase: GetAudioNoiseUseCase
 ) : ViewModel() {
 
-    val audioNoiseList = MutableLiveData<List<AudioNoise>>(emptyList())
-    val isLoading = MutableLiveData<Boolean>()
+    private val _audioNoiseList = MutableStateFlow<List<AudioNoise>>(emptyList())
+    val audioNoiseList = _audioNoiseList.asStateFlow()
+
+    private val _isLoading = MutableLiveData<Boolean>(false)
+    val isLoading = _isLoading
 
     fun onCreate() {
         viewModelScope.launch {
-            isLoading.postValue(true)
+            _isLoading.value = true
             val result = getAudioNoiseUseCase()
 
             if (!result.isNullOrEmpty()){
-                audioNoiseList.postValue(result.sortedWith(compareBy { it.type }))
-                isLoading.postValue(false)
+                _audioNoiseList.value = result.sortedWith(compareBy { it.type })
+                _isLoading.value = false
             }
         }
     }
