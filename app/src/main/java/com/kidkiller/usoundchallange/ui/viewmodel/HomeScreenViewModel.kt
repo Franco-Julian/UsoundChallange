@@ -16,7 +16,8 @@ class HomeScreenViewModel @Inject constructor(
     private val getAudioNoiseUseCase: GetAudioNoiseUseCase
 ) : ViewModel() {
 
-    private val _audioNoiseList = MutableStateFlow<List<AudioNoise>>(emptyList())
+
+    val _audioNoiseList = MutableStateFlow<List<AudioNoise>>(emptyList())
     val audioNoiseList = _audioNoiseList.asStateFlow()
 
     private val _isLoading = MutableLiveData<Boolean>(false)
