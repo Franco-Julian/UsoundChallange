@@ -7,6 +7,7 @@ import androidx.core.view.isVisible
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
+import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.kidkiller.usoundchallange.R
@@ -19,12 +20,13 @@ import kotlinx.coroutines.flow.collectLatest
 import kotlinx.coroutines.launch
 
 @AndroidEntryPoint
-class HomeScreen : Fragment(R.layout.fragment_home_screen), AudioNoiseAdapter.OnAudioNoiseClickListener  {
+class HomeScreen : Fragment(R.layout.fragment_home_screen),
+    AudioNoiseAdapter.OnAudioNoiseClickListener {
 
     private lateinit var binding: FragmentHomeScreenBinding
     private lateinit var adapter: AudioNoiseAdapter
     private var audioNoise = mutableListOf<AudioNoise>()
-    private lateinit var layoutManager : LinearLayoutManager
+    private lateinit var layoutManager: LinearLayoutManager
 
     private val homeScreenViewModel: HomeScreenViewModel by viewModels()
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -51,10 +53,11 @@ class HomeScreen : Fragment(R.layout.fragment_home_screen), AudioNoiseAdapter.On
 
     }
 
-    private fun initRecyclerView(list: List<AudioNoise>){
-        adapter = AudioNoiseAdapter(list,this)
+    private fun initRecyclerView(list: List<AudioNoise>) {
+        adapter = AudioNoiseAdapter(list, this)
         layoutManager = LinearLayoutManager(context)
         binding.recyclerAudioNoise.layoutManager = layoutManager
+        binding.recyclerAudioNoise.addItemDecoration(DividerItemDecoration(context,layoutManager.orientation))
         binding.recyclerAudioNoise.adapter = adapter
     }
 
@@ -76,6 +79,6 @@ class HomeScreen : Fragment(R.layout.fragment_home_screen), AudioNoiseAdapter.On
             audioNoise.timestamp,
             audioNoise.patient
         )
-            findNavController().navigate(action)
+        findNavController().navigate(action)
     }
 }

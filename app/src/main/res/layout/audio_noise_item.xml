@@ -11,37 +11,66 @@
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:src="@drawable/ic_baseline_audio_file_24"
-            android:layout_marginHorizontal="12dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <TextView
-            android:id="@+id/tvType"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginHorizontal="12dp"
-            app:layout_constraintBottom_toTopOf="@+id/tvPatient"
-            app:layout_constraintStart_toEndOf="@id/ivSound"
-            app:layout_constraintTop_toTopOf="parent"
-            tools:text="type" />
+    <TextView
+        android:id="@+id/textViewtype"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/tvPatient"
+        app:layout_constraintStart_toEndOf="@id/ivSound"
+        app:layout_constraintTop_toTopOf="parent"
+        android:text="Type :" />
+
+    <TextView
+        android:id="@+id/tvType"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="6dp"
+        app:layout_constraintBottom_toTopOf="@+id/tvPatient"
+        app:layout_constraintStart_toEndOf="@+id/textViewtype"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="type" />
+
+    <TextView
+        android:id="@+id/textViewpatient"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/tvLastUpdate"
+        app:layout_constraintStart_toEndOf="@id/ivSound"
+        app:layout_constraintTop_toBottomOf="@+id/tvType"
+        android:text="Patient :" />
 
         <TextView
             android:id="@+id/tvPatient"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginHorizontal="12dp"
+            android:layout_marginHorizontal="6dp"
             app:layout_constraintBottom_toTopOf="@+id/tvLastUpdate"
-            app:layout_constraintStart_toEndOf="@id/ivSound"
+            app:layout_constraintStart_toEndOf="@id/textViewpatient"
             app:layout_constraintTop_toBottomOf="@+id/tvType"
             tools:text="patient" />
+
+    <TextView
+        android:id="@+id/textViewlast"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@id/ivSound"
+        app:layout_constraintStart_toEndOf="@id/ivSound"
+        app:layout_constraintTop_toBottomOf="@+id/tvPatient"
+        android:textStyle="bold"
+        android:text="Last update :" />
 
         <TextView
             android:id="@+id/tvLastUpdate"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginHorizontal="12dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toEndOf="@id/ivSound"
+            android:layout_marginHorizontal="6dp"
+            app:layout_constraintBottom_toBottomOf="@id/ivSound"
+            app:layout_constraintStart_toEndOf="@id/textViewlast"
             app:layout_constraintTop_toBottomOf="@+id/tvPatient"
             tools:text="last update" />
 

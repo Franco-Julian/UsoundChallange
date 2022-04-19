@@ -14,169 +14,361 @@
         tools:context=".ui.view.SoundNoiseDetail">
 
         <TextView
+            android:id="@+id/tvTitle"
             android:layout_width="300dp"
             android:layout_height="50dp"
-            android:fontFamily="sans-serif-black"
-            android:textColor="@color/black"
             android:layout_marginTop="18dp"
+            android:fontFamily="sans-serif-black"
+            android:text="Audio Noise Information"
+            android:textColor="@color/black"
             android:textSize="25sp"
             android:textStyle="bold"
-            android:text="Audio Noise Information"
             app:layout_constraintBottom_toTopOf="@id/ivPersonInfo"
-            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"/>
+            app:layout_constraintTop_toTopOf="parent" />
 
         <ImageView
             android:id="@+id/ivPersonInfo"
             android:layout_width="200dp"
             android:layout_height="200dp"
             android:src="@drawable/ic_baseline_person_24"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintVertical_bias="0.1"/>
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.1" />
+
+        <TextView
+            android:id="@+id/textviewid"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:text="Id :"
+            app:layout_constraintHorizontal_bias="0"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/guideline2"
+            app:layout_constraintTop_toBottomOf="@id/ivPersonInfo" />
 
         <TextView
             android:id="@+id/tvId"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:layout_constraintTop_toBottomOf="@id/ivPersonInfo"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
             android:layout_margin="10dp"
-            tools:text="id"/>
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/textviewid"
+            app:layout_constraintTop_toBottomOf="@id/ivPersonInfo"
+            tools:text="id" />
+
+
+        <TextView
+            android:id="@+id/textviewtype"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:textStyle="bold"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/guideline2"
+            app:layout_constraintTop_toBottomOf="@id/tvId"
+            android:text="Type :" />
+
 
         <TextView
             android:id="@+id/tvType"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:layout_constraintTop_toBottomOf="@id/tvId"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
             android:layout_margin="10dp"
-            tools:text="Type"/>
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/textviewtype"
+            app:layout_constraintTop_toBottomOf="@id/tvId"
+            tools:text="Type" />
+
+        <TextView
+            android:id="@+id/textviewanc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:textStyle="bold"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/guideline2"
+            app:layout_constraintTop_toBottomOf="@id/tvType"
+            android:text="Anc :" />
 
         <TextView
             android:id="@+id/tvAnc"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:layout_constraintTop_toBottomOf="@id/tvType"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
             android:layout_margin="10dp"
-            tools:text="Anc"/>
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/textviewanc"
+            app:layout_constraintTop_toBottomOf="@id/tvType"
+            tools:text="Anc" />
+
+        <TextView
+            android:id="@+id/textviewfrequency"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:textStyle="bold"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/guideline2"
+            app:layout_constraintTop_toBottomOf="@id/tvAnc"
+            android:text="Frequency :" />
 
         <TextView
             android:id="@+id/tvFrequency"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:layout_constraintTop_toBottomOf="@id/tvAnc"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
             android:layout_margin="10dp"
-            tools:text="Frequency"/>
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/textviewfrequency"
+            app:layout_constraintTop_toBottomOf="@id/tvAnc"
+            tools:text="Frequency" />
+
+        <TextView
+            android:id="@+id/textviewchannel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:textStyle="bold"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/guideline2"
+            app:layout_constraintTop_toBottomOf="@id/tvFrequency"
+            android:text="Channel :" />
 
         <TextView
             android:id="@+id/tvChannel"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:layout_constraintTop_toBottomOf="@id/tvFrequency"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
             android:layout_margin="10dp"
-            tools:text="Channel"/>
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/textviewchannel"
+            app:layout_constraintTop_toBottomOf="@id/tvFrequency"
+            tools:text="Channel" />
+
+        <TextView
+            android:id="@+id/textviewhearingThresholdDifference"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:textStyle="bold"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/guideline2"
+            app:layout_constraintTop_toBottomOf="@id/tvChannel"
+            android:text="Hearing Thr. Diff :" />
 
         <TextView
             android:id="@+id/tvHearingThresholdDifference"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:layout_constraintTop_toBottomOf="@id/tvChannel"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
             android:layout_margin="10dp"
-            tools:text="HearingThresholdDifference"/>
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/textviewhearingThresholdDifference"
+            app:layout_constraintTop_toBottomOf="@id/tvChannel"
+            tools:text="HearingThresholdDifference" />
+
+        <TextView
+            android:id="@+id/textviewavgSoundPressureLevelDifference"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:textStyle="bold"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/guideline2"
+            app:layout_constraintTop_toBottomOf="@id/tvHearingThresholdDifference"
+            android:text="Avg Sound Pressure Lvl Diff :" />
 
         <TextView
             android:id="@+id/tvAvgSoundPressureLevelDifference"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:layout_constraintTop_toBottomOf="@id/tvHearingThresholdDifference"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
             android:layout_margin="10dp"
-            tools:text="AvgSoundPressureLevelDifference"/>
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/textviewavgSoundPressureLevelDifference"
+            app:layout_constraintTop_toBottomOf="@id/tvHearingThresholdDifference"
+            tools:text="AvgSoundPressureLevelDifference" />
+
+        <TextView
+            android:id="@+id/textviewinstantSoundPressureLevelDifference"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:textStyle="bold"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/guideline2"
+            app:layout_constraintTop_toBottomOf="@id/tvAvgSoundPressureLevelDifference"
+            android:text="Inst. Sound Pressure Lvl. Diff. :" />
 
         <TextView
             android:id="@+id/tvInstantSoundPressureLevelDifference"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:layout_constraintTop_toBottomOf="@id/tvAvgSoundPressureLevelDifference"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
             android:layout_margin="10dp"
-            tools:text="InstantSoundPressureLevelDifference"/>
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/textviewinstantSoundPressureLevelDifference"
+            app:layout_constraintTop_toBottomOf="@id/tvAvgSoundPressureLevelDifference"
+            tools:text="InstantSoundPressureLevelDifference" />
+
+        <TextView
+            android:id="@+id/textviewavgDistanceDifference"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:textStyle="bold"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/guideline2"
+            app:layout_constraintTop_toBottomOf="@id/tvInstantSoundPressureLevelDifference"
+            android:text="Avg. Dist. Diff. :" />
 
         <TextView
             android:id="@+id/tvAvgDistanceDifference"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:layout_constraintTop_toBottomOf="@id/tvInstantSoundPressureLevelDifference"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
             android:layout_margin="10dp"
-            tools:text="AvgDistanceDifference"/>
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/textviewavgDistanceDifference"
+            app:layout_constraintTop_toBottomOf="@id/tvInstantSoundPressureLevelDifference"
+            tools:text="AvgDistanceDifference" />
+
+        <TextView
+            android:id="@+id/textviewFreqInstantIntensityDifference"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:textStyle="bold"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/guideline2"
+            app:layout_constraintTop_toBottomOf="@id/tvAvgDistanceDifference"
+            android:text="Freq. Inst. Intensity Diff. :" />
 
         <TextView
             android:id="@+id/tvFreqInstantIntensityDifference"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:layout_constraintTop_toBottomOf="@id/tvAvgDistanceDifference"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
             android:layout_margin="10dp"
-            tools:text="FreqInstantIntensityDifference"/>
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/textviewFreqInstantIntensityDifference"
+            app:layout_constraintTop_toBottomOf="@id/tvAvgDistanceDifference"
+            tools:text="FreqInstantIntensityDifference" />
+
+        <TextView
+            android:id="@+id/textviewfreqAvgIntensityDifference"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:textStyle="bold"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/guideline2"
+            app:layout_constraintTop_toBottomOf="@id/tvFreqInstantIntensityDifference"
+            android:text="Freq. Avg. Intensity. Diff. :" />
 
         <TextView
             android:id="@+id/tvFreqAvgIntensityDifference"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:layout_constraintTop_toBottomOf="@id/tvFreqInstantIntensityDifference"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
             android:layout_margin="10dp"
-            tools:text="FreqAvgIntensityDifference"/>
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/textviewfreqAvgIntensityDifference"
+            app:layout_constraintTop_toBottomOf="@id/tvFreqInstantIntensityDifference"
+            tools:text="FreqAvgIntensityDifference" />
+
+        <TextView
+            android:id="@+id/textviewlastUpdate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:textStyle="bold"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/guideline2"
+            app:layout_constraintTop_toBottomOf="@id/tvFreqAvgIntensityDifference"
+            android:text="Last Update :" />
 
         <TextView
             android:id="@+id/tvLastUpdate"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:layout_constraintTop_toBottomOf="@id/tvFreqAvgIntensityDifference"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
             android:layout_margin="10dp"
-            tools:text="LastUpdate"/>
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/textviewlastUpdate"
+            app:layout_constraintTop_toBottomOf="@id/tvFreqAvgIntensityDifference"
+            tools:text="LastUpdate" />
+
+        <TextView
+            android:id="@+id/textviewTimestamp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:textStyle="bold"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/guideline2"
+            app:layout_constraintTop_toBottomOf="@id/tvLastUpdate"
+            android:text="Timestamp :" />
 
         <TextView
             android:id="@+id/tvTimestamp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:layout_constraintTop_toBottomOf="@id/tvLastUpdate"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
             android:layout_margin="10dp"
-            tools:text="Timestamp"/>
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/textviewTimestamp"
+            app:layout_constraintTop_toBottomOf="@id/tvLastUpdate"
+            tools:text="Timestamp" />
+
+        <TextView
+            android:id="@+id/textviewpatient"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:textStyle="bold"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/guideline2"
+            app:layout_constraintTop_toBottomOf="@id/tvTimestamp"
+            android:text="Patient :" />
 
         <TextView
             android:id="@+id/tvPatient"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:layout_constraintTop_toBottomOf="@id/tvTimestamp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
             android:layout_margin="10dp"
-            tools:text="Patient"/>
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/textviewpatient"
+            app:layout_constraintTop_toBottomOf="@id/tvTimestamp"
+            tools:text="Patient" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="58dp" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>
