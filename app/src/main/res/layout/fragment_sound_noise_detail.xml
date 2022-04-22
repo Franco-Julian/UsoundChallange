@@ -12,7 +12,7 @@
 
         tools:context=".ui.view.SoundNoiseDetail">
 
-        <TextView
+        <com.google.android.material.textview.MaterialTextView
             android:id="@+id/tvTitle"
             android:layout_width="300dp"
             android:layout_height="50dp"
@@ -27,7 +27,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <ImageView
+        <com.google.android.material.imageview.ShapeableImageView
             android:id="@+id/ivPersonInfo"
             android:layout_width="200dp"
             android:layout_height="200dp"
@@ -38,7 +38,7 @@
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.1" />
 
-        <TextView
+        <com.google.android.material.textview.MaterialTextView
             android:id="@+id/textviewid"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -50,7 +50,7 @@
             app:layout_constraintStart_toStartOf="@+id/guideline2"
             app:layout_constraintTop_toBottomOf="@id/ivPersonInfo" />
 
-        <TextView
+        <com.google.android.material.textview.MaterialTextView
             android:id="@+id/tvId"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -62,7 +62,7 @@
             tools:text="id" />
 
 
-        <TextView
+        <com.google.android.material.textview.MaterialTextView
             android:id="@+id/textviewtype"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -75,7 +75,7 @@
             app:layout_constraintTop_toBottomOf="@id/tvId" />
 
 
-        <TextView
+        <com.google.android.material.textview.MaterialTextView
             android:id="@+id/tvType"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -86,7 +86,7 @@
             app:layout_constraintTop_toBottomOf="@id/tvId"
             tools:text="Type" />
 
-        <TextView
+        <com.google.android.material.textview.MaterialTextView
             android:id="@+id/textviewanc"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -98,7 +98,7 @@
             app:layout_constraintStart_toStartOf="@+id/guideline2"
             app:layout_constraintTop_toBottomOf="@id/tvType" />
 
-        <TextView
+        <com.google.android.material.textview.MaterialTextView
             android:id="@+id/tvAnc"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -109,7 +109,7 @@
             app:layout_constraintTop_toBottomOf="@id/tvType"
             tools:text="Anc" />
 
-        <TextView
+        <com.google.android.material.textview.MaterialTextView
             android:id="@+id/textviewfrequency"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -121,7 +121,7 @@
             app:layout_constraintStart_toStartOf="@+id/guideline2"
             app:layout_constraintTop_toBottomOf="@id/tvAnc" />
 
-        <TextView
+        <com.google.android.material.textview.MaterialTextView
             android:id="@+id/tvFrequency"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -132,7 +132,7 @@
             app:layout_constraintTop_toBottomOf="@id/tvAnc"
             tools:text="Frequency" />
 
-        <TextView
+        <com.google.android.material.textview.MaterialTextView
             android:id="@+id/textviewchannel"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -144,7 +144,7 @@
             app:layout_constraintStart_toStartOf="@+id/guideline2"
             app:layout_constraintTop_toBottomOf="@id/tvFrequency" />
 
-        <TextView
+        <com.google.android.material.textview.MaterialTextView
             android:id="@+id/tvChannel"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -155,7 +155,7 @@
             app:layout_constraintTop_toBottomOf="@id/tvFrequency"
             tools:text="Channel" />
 
-        <TextView
+        <com.google.android.material.textview.MaterialTextView
             android:id="@+id/textviewhearingThresholdDifference"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -167,7 +167,7 @@
             app:layout_constraintStart_toStartOf="@+id/guideline2"
             app:layout_constraintTop_toBottomOf="@id/tvChannel" />
 
-        <TextView
+        <com.google.android.material.textview.MaterialTextView
             android:id="@+id/tvHearingThresholdDifference"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -178,7 +178,7 @@
             app:layout_constraintTop_toBottomOf="@id/tvChannel"
             tools:text="HearingThresholdDifference" />
 
-        <TextView
+        <com.google.android.material.textview.MaterialTextView
             android:id="@+id/textviewavgSoundPressureLevelDifference"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -190,7 +190,7 @@
             app:layout_constraintStart_toStartOf="@+id/guideline2"
             app:layout_constraintTop_toBottomOf="@id/tvHearingThresholdDifference" />
 
-        <TextView
+        <com.google.android.material.textview.MaterialTextView
             android:id="@+id/tvAvgSoundPressureLevelDifference"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -201,7 +201,7 @@
             app:layout_constraintTop_toBottomOf="@id/tvHearingThresholdDifference"
             tools:text="AvgSoundPressureLevelDifference" />
 
-        <TextView
+        <com.google.android.material.textview.MaterialTextView
             android:id="@+id/textviewinstantSoundPressureLevelDifference"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -213,7 +213,7 @@
             app:layout_constraintStart_toStartOf="@+id/guideline2"
             app:layout_constraintTop_toBottomOf="@id/tvAvgSoundPressureLevelDifference" />
 
-        <TextView
+        <com.google.android.material.textview.MaterialTextView
             android:id="@+id/tvInstantSoundPressureLevelDifference"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -224,7 +224,7 @@
             app:layout_constraintTop_toBottomOf="@id/tvAvgSoundPressureLevelDifference"
             tools:text="InstantSoundPressureLevelDifference" />
 
-        <TextView
+        <com.google.android.material.textview.MaterialTextView
             android:id="@+id/textviewavgDistanceDifference"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -236,7 +236,7 @@
             app:layout_constraintStart_toStartOf="@+id/guideline2"
             app:layout_constraintTop_toBottomOf="@id/tvInstantSoundPressureLevelDifference" />
 
-        <TextView
+        <com.google.android.material.textview.MaterialTextView
             android:id="@+id/tvAvgDistanceDifference"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -247,7 +247,7 @@
             app:layout_constraintTop_toBottomOf="@id/tvInstantSoundPressureLevelDifference"
             tools:text="AvgDistanceDifference" />
 
-        <TextView
+        <com.google.android.material.textview.MaterialTextView
             android:id="@+id/textviewFreqInstantIntensityDifference"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -259,7 +259,7 @@
             app:layout_constraintStart_toStartOf="@+id/guideline2"
             app:layout_constraintTop_toBottomOf="@id/tvAvgDistanceDifference" />
 
-        <TextView
+        <com.google.android.material.textview.MaterialTextView
             android:id="@+id/tvFreqInstantIntensityDifference"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -270,7 +270,7 @@
             app:layout_constraintTop_toBottomOf="@id/tvAvgDistanceDifference"
             tools:text="FreqInstantIntensityDifference" />
 
-        <TextView
+        <com.google.android.material.textview.MaterialTextView
             android:id="@+id/textviewfreqAvgIntensityDifference"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -282,7 +282,7 @@
             app:layout_constraintStart_toStartOf="@+id/guideline2"
             app:layout_constraintTop_toBottomOf="@id/tvFreqInstantIntensityDifference" />
 
-        <TextView
+        <com.google.android.material.textview.MaterialTextView
             android:id="@+id/tvFreqAvgIntensityDifference"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -293,7 +293,7 @@
             app:layout_constraintTop_toBottomOf="@id/tvFreqInstantIntensityDifference"
             tools:text="FreqAvgIntensityDifference" />
 
-        <TextView
+        <com.google.android.material.textview.MaterialTextView
             android:id="@+id/textviewlastUpdate"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -305,7 +305,7 @@
             app:layout_constraintStart_toStartOf="@+id/guideline2"
             app:layout_constraintTop_toBottomOf="@id/tvFreqAvgIntensityDifference" />
 
-        <TextView
+        <com.google.android.material.textview.MaterialTextView
             android:id="@+id/tvLastUpdate"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -316,7 +316,7 @@
             app:layout_constraintTop_toBottomOf="@id/tvFreqAvgIntensityDifference"
             tools:text="LastUpdate" />
 
-        <TextView
+        <com.google.android.material.textview.MaterialTextView
             android:id="@+id/textviewTimestamp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -328,7 +328,7 @@
             app:layout_constraintStart_toStartOf="@+id/guideline2"
             app:layout_constraintTop_toBottomOf="@id/tvLastUpdate" />
 
-        <TextView
+        <com.google.android.material.textview.MaterialTextView
             android:id="@+id/tvTimestamp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -339,7 +339,7 @@
             app:layout_constraintTop_toBottomOf="@id/tvLastUpdate"
             tools:text="Timestamp" />
 
-        <TextView
+        <com.google.android.material.textview.MaterialTextView
             android:id="@+id/textviewpatient"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -351,7 +351,7 @@
             app:layout_constraintStart_toStartOf="@+id/guideline2"
             app:layout_constraintTop_toBottomOf="@id/tvTimestamp" />
 
-        <TextView
+        <com.google.android.material.textview.MaterialTextView
             android:id="@+id/tvPatient"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
